@@ -1,0 +1,53 @@
+$font-header : #014E56;
+$font-color:white;
+$font-secondColor: #f67E7E;
+$font-thirdColor:#79C8C7;
+$font-text: 'Livvic',
+sans-serif;
+$font-section: #012F34;
+
+
+*,
+
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    margin: -8px;
+}
+
+
+body {
+    font-family: 'Livvic',
+        sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1.6rem;
+
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-list .btn,
+#section-3 .btn {
+    border-radius: 30px;
+    color: $font-color;
+    border-color: $font-color;
+}

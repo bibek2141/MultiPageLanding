@@ -1,0 +1,191 @@
+@import 'declaration';
+@import 'responsiveStyles';
+
+@mixin navBar {
+
+    ul {
+        list-style-type: none;
+    }
+
+    #navAbout {
+        background-color: $font-section;
+    }
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        color: $font-color !important;
+    }
+
+    header {
+        width: 100%;
+        height: 10rem;
+        background-color: $font-header;
+        color: $font-color;
+    }
+
+
+    .container {
+        width: 100%;
+        max-width: 100rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    nav {
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        padding-top: 2rem;
+    }
+
+    .nav-brand {
+        width: 2rem;
+    }
+
+    .menu-icons i {
+        color: $font-color;
+        cursor: pointer;
+    }
+
+    .nav-img {
+        margin-top: 5rem;
+        margin-left: 8rem;
+        width: 150px;
+    }
+
+    .nav-list {
+        padding-top: 0;
+        width: 13rem;
+        height: 100vh;
+        position: fixed;
+        background-color: $font-header;
+        top: 0;
+        right: -18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1500;
+        transition: all 650ms ease-in-out;
+        background-image: url('../images/bg-pattern-about-1-mobile-nav-1.svg');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: calc(150%) calc(90%);
+        overflow: auto;
+
+    }
+
+    .nav-list .btn:hover {
+        background-color: $font-color !important;
+        color: black !important;
+        border-color: $font-color !important;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+
+
+@include mobileS {
+    @include navBar;
+}
+
+@include mobileM {
+    .nav-list {
+        width: 16.2rem;
+    }
+}
+
+@include tablet {
+    header {
+        height: 8rem;
+    }
+
+
+    .nav-brand {
+        width: 4rem;
+        margin-top: .2rem;
+    }
+
+    .nav-list {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: intial;
+        background: none;
+    }
+
+    .menu-icons,
+    .nav-img {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 1rem;
+    }
+
+    .about {
+        margin-right: 16rem;
+
+    }
+
+}
+
+
+@include laptop {
+
+    .nav-link {
+        margin-left: 80px;
+    }
+
+
+    nav {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    * {
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-link:hover {
+        color: $font-secondColor !important;
+    }
+}
+
+@include laptopL {
+    nav {
+        padding-left: 7rem;
+    }
+}
